@@ -2,8 +2,8 @@
 *
 * Description of the program goes here  // provide a brief description
 *
-* @author <Your Name here>  // replace <...> with your name
-* @version <date/of/completion> // replace <...> with the date
+* @author Shaurya Prakash
+* @version 31/10/2014
 */
 
 import edu.fcps.karel2.Display;
@@ -11,7 +11,67 @@ import edu.fcps.karel2.Robot;
 
 public class Lab04 {
 
-     public static void main(String[] args) {
-          // TODO Your code goes here
+     public static void takeTheField(Athlete arg) {
+          arg.move();
+          arg.move();
+          arg.move();
+          arg.move();
+          arg.turnRight();
+          arg.move();
+          arg.move();
+     }
+      public static void main (String[] args) 
+     {
+            Display.openWorld("maps/arena.map");
+            Display.setSize(10, 10);
+            Display.setSpeed(9);
+            
+      Robot coach = new Robot(1, 7, Display.EAST, 0);
+      Athlete a = new Athlete();
+      Athlete b = new Athlete();
+      Athlete c = new Athlete();
+      Athlete d = new Athlete();
+      Athlete e = new Athlete();
+      Athlete f = new Athlete();
+      
+      takeTheField(a);	
+      takeTheField(b);
+      takeTheField(c);
+      takeTheField(d);
+      takeTheField(e);
+      takeTheField(f);
+      
+      a.move();
+      a.move();
+      a.move();
+      a.turnLeft();
+      a.move();
+      a.move();
+      a.turnAround();
+      b.move();
+      b.turnLeft();
+      b.move();
+      b.turnAround();
+      c.move();
+      c.move();
+      c.turnRight();
+      d.move();
+      d.move();
+      d.move();
+      d.turnRight();
+      e.move();
+      e.move();
+      e.move();
+      e.move();
+      e.turnRight();
+      f.move();
+      f.move();
+      f.move();
+      f.move();
+      f.move();
+      f.turnLeft();
+      f.move();
+      f.turnAround();
+      
      }
 }
